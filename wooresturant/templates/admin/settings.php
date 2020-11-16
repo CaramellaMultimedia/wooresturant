@@ -1,7 +1,8 @@
 <?php
-include("header.php");
+include(WOORESTURANT__PLUGIN_DIR . "/templates/admin/header.php");
 ?>
 <div class="settings-top-status"></div>
+<h3><?php echo __("Settings", "wooresturant"); ?></h3>
 <table class="form-table">
   <form class="wooresturant_update_settings_form" action="" method="POST">
     <input type="hidden" name="action" value="update_settings">
@@ -43,4 +44,4 @@ include("header.php");
   </form>
 </table>
 <?php
-include("footer.php");
+include(WOORESTURANT__PLUGIN_DIR . "/templates/admin/footer.php");

@@ -44,5 +44,24 @@ class WooResturant_Admin {
 
   }
 
+  public static function slots_page() {
+
+    wp_enqueue_script( 'wooresturant-admin-ajax',  plugin_dir_url(__FILE__) . 'assets/js/admin/settings.js', array('jquery'), null, true );
+    wp_localize_script( 'wooresturant-admin-ajax', 'wooresturant_admin_ajax_object', array('ajaxurl' => admin_url( 'admin-ajax.php' )));
+
+    include("templates/admin/slots.php");
+
+  } 
+
+  public static function shortcodes_page() {
+
+    wp_enqueue_script( 'wooresturant-admin-ajax',  plugin_dir_url(__FILE__) . 'assets/js/admin/settings.js', array('jquery'), null, true );
+    wp_localize_script( 'wooresturant-admin-ajax', 'wooresturant_admin_ajax_object', array('ajaxurl' => admin_url( 'admin-ajax.php' )));
+
+    //include("templates/admin/shortcodes/shortcodes.php"); 
+    include("templates/admin/shortcodes/shortcodes.php"); 
+
+  } 
+
 }
 ?>

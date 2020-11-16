@@ -36,5 +36,7 @@ add_action( 'admin_menu', 'admin_section' );
 
 function admin_section() {
     add_menu_page( 'WooResturant', 'WooResturant', 'manage_options', 'wooresturant', array("WooResturant_Admin", "admin_page"), plugin_dir_url(__FILE__) . 'assets/img/icon.png', 20 );
-		add_submenu_page( 'wooresturant', 'WooResturant', 'Settings', 'manage_options', 'wooresturant-settings', array("WooResturant_Admin", "settings_page") );
+	add_submenu_page( 'wooresturant', 'WooResturant', 'Slots', 'manage_options', 'wooresturant-slots', array("WooResturant_Admin", "slots_page") );
+	add_submenu_page( 'wooresturant', 'WooResturant', 'Shortcodes', 'manage_options', 'wooresturant-shortcodes', array("WooResturant_Admin", "shortcodes_page") );
+	add_submenu_page( 'wooresturant', 'WooResturant', 'Settings', 'manage_options', 'wooresturant-settings', array("WooResturant_Admin", "settings_page") );
 }
